@@ -1,0 +1,12 @@
+def hanoi(discos,torreinicio =1,torreaux =2,torrefinal=3):
+    if discos ==1:
+        print(torreinicio,'a',torrefinal)
+
+    else:
+        hanoi(discos-1,torreinicio ,torrefinal ,torreaux )
+        print(torreinicio,'a',torrefinal)
+        hanoi(discos-1,torreaux,torreinicio,torrefinal)
+    return
+
+n = int(input('ingresar numero '))
+hanoi(n)
