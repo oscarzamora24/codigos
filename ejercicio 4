@@ -1,0 +1,12 @@
+def MCD(x,y):
+  if x>=y:
+    if y==0:
+      r=x
+    else:
+      r=MCD(y, x%y)
+  else:
+    r=MCD(y,x)
+  return r
+m=int(input("Ingrese el numero: "))
+n=int(input("Ingrese el numero: "))
+MCD(m,n)
